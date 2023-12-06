@@ -1,8 +1,6 @@
-import fs from 'fs'
-import path from 'path'
-
 import { describe, expect, test } from '@jest/globals';
 import { calculateFewestRequiredCubes, calculateGamePower, filterPossibleGames, parseCubes, parseGame, parseGameId, partOne, partTwo } from './day-02';
+import { readDataFromFile } from './utils';
 
 const sampleData = `
 Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
@@ -12,7 +10,7 @@ Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
 Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
 `
 
-const data = fs.readFileSync(path.resolve(__dirname, './day-02.data.txt'), 'utf8')
+const data = readDataFromFile('./day-02.data.txt')
 
 describe('Day 02', () => {
     describe('Utils', () => {

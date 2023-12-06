@@ -1,3 +1,5 @@
+import { splitLines } from "./utils"
+
 type CubeCollection = {
     red: number
     green: number
@@ -9,10 +11,6 @@ export type Bag = CubeCollection
 export type Game = {
     id: number
     rounds: CubeCollection[]
-}
-
-const splitLines = (input: string): string[] => {
-    return input.trim().split('\n')
 }
 
 export const parseGame = (line: string): Game => {
