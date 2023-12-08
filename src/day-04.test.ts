@@ -12,7 +12,7 @@ Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11`
 
 const data = readDataFromFile('./day-04.data.txt')
 
-describe('Part 1', () => {
+describe('Day 4', () => {
     describe('Utils', () => {
         test('parseCard validation', () => {
             expect(parseCard('Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53')).toStrictEqual({
